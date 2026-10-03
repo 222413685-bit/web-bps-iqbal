@@ -8,6 +8,48 @@
     <title>Publikasi - BPS Kabupaten Ciamis</title>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        .publication-cover {
+            width: 65px;
+            height: 85px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 576px) {
+
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+
+            .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .publication-table {
+                min-width: 700px;
+            }
+
+            .info-alert {
+                font-size: 0.9rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .action-buttons .btn {
+                width: 70px;
+            }
+
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -17,16 +59,21 @@
 
         <div class="container">
 
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+            <a
+                class="navbar-brand fw-bold d-flex align-items-center"
+                href="/">
 
                 <img
                     src="/images/Logo_BPS.png"
                     alt="Logo BPS"
                     width="60"
                     height="60"
-                    class="me-2">
+                    class="me-2"
+                    style="object-fit: contain;">
 
-                Badan Pusat Statistik Kabupaten Ciamis
+                <span>
+                    Badan Pusat Statistik Kabupaten Ciamis
+                </span>
 
             </a>
 
@@ -43,7 +90,9 @@
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav">
 
                 <ul class="navbar-nav ms-auto">
 
@@ -97,20 +146,21 @@
 
 
     <!-- Isi halaman -->
-    <main class="py-5">
+    <main class="py-4 py-md-5">
 
         <div class="container">
 
             <!-- Header halaman -->
-            <div class="d-flex flex-column flex-md-row
-                        justify-content-between
-                        align-items-md-center
-                        gap-3
-                        mb-4">
+            <div
+                class="d-flex flex-column flex-md-row
+                       justify-content-between
+                       align-items-md-center
+                       gap-3
+                       mb-4">
 
                 <div>
 
-                    <h1 class="fw-bold mb-1">
+                    <h1 class="fw-bold mb-1 page-title">
                         Daftar Publikasi
                     </h1>
 
@@ -137,7 +187,7 @@
 
             <!-- Informasi -->
             <div
-                class="alert alert-primary border-0 shadow-sm"
+                class="alert alert-primary border-0 shadow-sm info-alert"
                 role="alert">
 
                 <div class="d-flex align-items-start">
@@ -172,7 +222,8 @@
 
                     <div class="table-responsive">
 
-                        <table class="table table-hover align-middle mb-0">
+                        <table
+                            class="table table-hover align-middle mb-0 publication-table">
 
                             <thead class="table-primary">
 
@@ -273,9 +324,7 @@
                                                 <img
                                                     src="/images/{{ $item->sampul }}"
                                                     alt="{{ $item->judul }}"
-                                                    width="65"
-                                                    height="85"
-                                                    class="img-thumbnail object-fit-cover">
+                                                    class="img-thumbnail publication-cover">
 
                                             @else
 
@@ -296,7 +345,8 @@
                                             <div
                                                 class="d-flex
                                                        justify-content-center
-                                                       gap-2">
+                                                       gap-2
+                                                       action-buttons">
 
                                                 <a
                                                     href="/publikasi/{{ $item->id }}/edit"
@@ -346,16 +396,12 @@
                                             </div>
 
                                             <h5 class="fw-semibold">
-
                                                 Belum Ada Publikasi
-
                                             </h5>
 
                                             <p class="text-muted">
-
                                                 Belum terdapat data publikasi
                                                 dalam sistem.
-
                                             </p>
 
                                             <a
@@ -393,15 +439,11 @@
         <div class="container text-center">
 
             <p class="mb-1 text-muted">
-
                 &copy; 2026 Muhammad Iqbal Nursyamsi
-
             </p>
 
             <p class="mb-0 text-muted">
-
                 BPS Kabupaten Ciamis
-
             </p>
 
         </div>

@@ -24,6 +24,40 @@
             border-color: #0d6efd;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
+
+        .main-gallery-image {
+            height: 450px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 576px) {
+
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+
+            .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .main-gallery-image {
+                height: 280px;
+            }
+
+            .gallery-thumb {
+                width: 80px;
+                height: 60px;
+            }
+
+            .gallery-thumbnails {
+                gap: 0.5rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -44,7 +78,7 @@
                     class="me-2"
                     style="object-fit: contain;">
 
-                Badan Pusat Statitsik Kabupaten Ciamis
+                Badan Pusat Statistik Kabupaten Ciamis
 
             </a>
 
@@ -110,7 +144,7 @@
                     Dokumentasi
                 </span>
 
-                <h2 class="fw-bold mb-1">
+                <h2 class="fw-bold mb-1 page-title">
                     Galeri Kegiatan
                 </h2>
 
@@ -124,7 +158,7 @@
             <!-- Gambar utama -->
             <div class="row justify-content-center">
 
-                <div class="col-lg-8">
+                <div class="col-12 col-lg-8">
 
                     <div class="card border-0 shadow-sm">
 
@@ -134,8 +168,7 @@
                                 id="mainImage"
                                 src="/images/galeri1.jpg"
                                 alt="Kegiatan BPS Kabupaten Ciamis"
-                                class="img-fluid rounded w-100"
-                                style="height: 450px; object-fit: cover;">
+                                class="img-fluid rounded w-100 main-gallery-image">
 
                         </div>
 
@@ -149,9 +182,9 @@
             <!-- Thumbnail -->
             <div class="row justify-content-center mt-3">
 
-                <div class="col-lg-8">
+                <div class="col-12 col-lg-8">
 
-                    <div class="d-flex justify-content-center gap-2 flex-wrap">
+                    <div class="d-flex justify-content-center gap-2 flex-wrap gallery-thumbnails">
 
                         <img
                             src="/images/galeri1.jpg"

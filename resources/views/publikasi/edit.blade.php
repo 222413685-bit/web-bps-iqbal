@@ -8,6 +8,55 @@
     <title>Edit Publikasi - BPS Kabupaten Ciamis</title>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        .page-title {
+            font-size: 2rem;
+        }
+
+        .current-cover {
+            width: 70px;
+            height: 90px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+
+            .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .form-card-body {
+                padding: 1.25rem !important;
+            }
+
+            .current-cover {
+                width: 60px;
+                height: 80px;
+            }
+
+            .current-file {
+                font-size: 0.8rem;
+                word-break: break-word;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+
+            .form-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -103,7 +152,7 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-lg-6 col-xl-5">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
 
                     <!-- Header -->
                     <div class="text-center mb-4">
@@ -112,7 +161,7 @@
                             Edit Data
                         </span>
 
-                        <h2 class="fw-bold mb-1">
+                        <h2 class="fw-bold mb-1 page-title">
                             Edit Publikasi
                         </h2>
 
@@ -126,7 +175,7 @@
                     <!-- Form -->
                     <div class="card border-0 shadow-sm">
 
-                        <div class="card-body p-4">
+                        <div class="card-body p-4 form-card-body">
 
                             <form
                                 action="/publikasi/{{ $publikasi->id }}"
@@ -217,18 +266,15 @@
                                                 <img
                                                     src="/images/{{ $publikasi->sampul }}"
                                                     alt="{{ $publikasi->judul }}"
-                                                    width="70"
-                                                    height="90"
-                                                    class="img-thumbnail"
-                                                    style="object-fit: cover;">
+                                                    class="img-thumbnail current-cover">
 
-                                                <div class="ms-3">
+                                                <div class="ms-3 flex-grow-1">
 
                                                     <small class="text-muted">
                                                         File saat ini
                                                     </small>
 
-                                                    <div class="fw-semibold">
+                                                    <div class="fw-semibold current-file">
                                                         {{ $publikasi->sampul }}
                                                     </div>
 
@@ -284,7 +330,7 @@
 
 
                                 <!-- Tombol -->
-                                <div class="d-flex gap-2">
+                                <div class="d-flex gap-2 form-buttons">
 
                                     <button
                                         type="submit"

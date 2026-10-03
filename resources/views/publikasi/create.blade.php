@@ -8,6 +8,37 @@
     <title>Tambah Publikasi - BPS Kabupaten Ciamis</title>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        @media (max-width: 576px) {
+
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+
+            .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .form-card-body {
+                padding: 1.25rem !important;
+            }
+
+            .form-buttons {
+                flex-direction: column;
+            }
+
+            .form-buttons .btn {
+                width: 100%;
+            }
+
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -17,7 +48,9 @@
 
         <div class="container">
 
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+            <a
+                class="navbar-brand fw-bold d-flex align-items-center"
+                href="/">
 
                 <img
                     src="/images/Logo_BPS.png"
@@ -27,7 +60,9 @@
                     class="me-2"
                     style="object-fit: contain;">
 
-                Badan Pusat Statistik Kabupaten Ciamis
+                <span>
+                    Badan Pusat Statistik Kabupaten Ciamis
+                </span>
 
             </a>
 
@@ -44,7 +79,9 @@
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav">
 
                 <ul class="navbar-nav ms-auto">
 
@@ -98,18 +135,18 @@
 
 
     <!-- Form tambah publikasi -->
-    <main class="py-4">
+    <main class="py-4 py-md-5">
 
         <div class="container">
 
             <div class="row justify-content-center">
 
-                <div class="col-lg-6 col-xl-5">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
 
                     <!-- Header -->
                     <div class="text-center mb-4">
 
-                        <h2 class="fw-bold mb-1">
+                        <h2 class="fw-bold mb-1 page-title">
                             Tambah Publikasi
                         </h2>
 
@@ -123,7 +160,7 @@
                     <!-- Form -->
                     <div class="card border-0 shadow-sm">
 
-                        <div class="card-body p-4">
+                        <div class="card-body p-4 form-card-body">
 
                             <form
                                 action="/publikasi"
@@ -238,7 +275,7 @@
 
 
                                 <!-- Tombol -->
-                                <div class="d-flex gap-2">
+                                <div class="d-flex gap-2 form-buttons">
 
                                     <button
                                         type="submit"
