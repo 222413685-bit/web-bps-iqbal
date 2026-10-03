@@ -8,6 +8,53 @@
     <title>Beranda - BPS Kabupaten Ciamis</title>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+    <style>
+        .hero-card {
+            border-radius: 1rem;
+        }
+
+        .hero-icon {
+            font-size: 5rem;
+        }
+
+        @media (max-width: 576px) {
+
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+
+            .navbar-brand img {
+                width: 45px;
+                height: 45px;
+            }
+
+            .hero-card .card-body {
+                padding: 2rem 1.25rem !important;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.15rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-icon {
+                font-size: 4rem;
+            }
+
+            .stat-card .card-body {
+                padding: 1.25rem !important;
+            }
+
+        }
+    </style>
 </head>
 
 <body class="bg-light">
@@ -17,16 +64,21 @@
 
         <div class="container">
 
-            <a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+            <a
+                class="navbar-brand fw-bold d-flex align-items-center"
+                href="/">
 
                 <img
                     src="/images/Logo_BPS.png"
                     alt="Logo BPS"
                     width="60"
                     height="60"
-                    class="me-2">
+                    class="me-2"
+                    style="object-fit: contain;">
 
-                Badan Pusat Statistik Kabupaten Ciamis
+                <span>
+                    Badan Pusat Statistik Kabupaten Ciamis
+                </span>
 
             </a>
 
@@ -43,7 +95,9 @@
 
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div
+                class="collapse navbar-collapse"
+                id="navbarNav">
 
                 <ul class="navbar-nav ms-auto">
 
@@ -97,31 +151,33 @@
 
 
     <!-- Selamat datang -->
-    <section class="py-5">
+    <section class="py-4 py-md-5">
 
         <div class="container">
 
-            <div class="card border-0 shadow-sm bg-primary text-white">
+            <div
+                class="card border-0 shadow-sm bg-primary text-white hero-card">
 
-                <div class="card-body p-5">
+                <div class="card-body p-4 p-md-5">
 
                     <div class="row align-items-center">
 
-                        <div class="col-lg-8">
+                        <!-- Teks -->
+                        <div class="col-12 col-lg-8">
 
                             <span class="badge bg-light text-primary mb-3">
                                 BPS Kabupaten Ciamis
                             </span>
 
-                            <h1 class="display-5 fw-bold mb-3">
+                            <h1 class="display-5 fw-bold mb-3 hero-title">
                                 Selamat Datang
                             </h1>
 
-                            <h4 class="fw-normal mb-3">
+                            <h4 class="fw-normal mb-3 hero-subtitle">
                                 di Website Publikasi BPS Kabupaten Ciamis
                             </h4>
 
-                            <p class="lead mb-4">
+                            <p class="lead mb-4 hero-description">
                                 Temukan berbagai informasi dan publikasi
                                 statistik Kabupaten Ciamis dalam satu halaman.
                             </p>
@@ -136,11 +192,15 @@
 
                         </div>
 
-                        <div class="col-lg-4 text-center mt-4 mt-lg-0">
 
-                            <div class="bg-white bg-opacity-10 rounded-4 p-4 d-inline-block">
+                        <!-- Icon -->
+                        <div
+                            class="col-12 col-lg-4 text-center mt-4 mt-lg-0">
 
-                                <div class="display-1">
+                            <div
+                                class="bg-white bg-opacity-10 rounded-4 p-4 d-inline-block">
+
+                                <div class="hero-icon">
                                     📊
                                 </div>
 
@@ -164,7 +224,7 @@
 
 
     <!-- Statistik publikasi -->
-    <section class="pb-5">
+    <section class="pb-4 pb-md-5">
 
         <div class="container">
 
@@ -181,12 +241,13 @@
             </div>
 
 
-            <div class="row g-4">
+            <div class="row g-3 g-md-4">
 
                 <!-- Total publikasi -->
-                <div class="col-md-4">
+                <div class="col-12 col-md-4">
 
-                    <div class="card border-0 shadow-sm h-100">
+                    <div
+                        class="card border-0 shadow-sm h-100 stat-card">
 
                         <div class="card-body p-4">
 
@@ -230,9 +291,10 @@
 
 
                 <!-- Publikasi 2026 -->
-                <div class="col-md-4">
+                <div class="col-12 col-md-4">
 
-                    <div class="card border-0 shadow-sm h-100">
+                    <div
+                        class="card border-0 shadow-sm h-100 stat-card">
 
                         <div class="card-body p-4">
 
@@ -276,9 +338,10 @@
 
 
                 <!-- Publikasi 2025 -->
-                <div class="col-md-4">
+                <div class="col-12 col-md-4">
 
-                    <div class="card border-0 shadow-sm h-100">
+                    <div
+                        class="card border-0 shadow-sm h-100 stat-card">
 
                         <div class="card-body p-4">
 
